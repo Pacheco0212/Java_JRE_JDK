@@ -3,20 +3,19 @@ package Types_Variables;
 public class Conditionals {
 
 	public static void main(String[] args) {
-		
+
 		int age = 17;
-		int quantity = 2;
+		int peopleQuantity = 2;
 		
-		if(age >= 18) {
-			System.out.println("You can enter");
+		boolean couple = peopleQuantity > 1;
+		boolean canEnter = (age >= 18 && couple);
+
+		if (canEnter) {
+			System.out.println("You are allowed to enter");
 		} else {
-			if(quantity >= 2) {
-				System.out.println("You are under-age but your entry is allowed");
-			} else {
-				System.out.println("You are not allowed to enter");
-			}
+			System.out.println("You are not allowed to enter");
 		}
-		
+
 	}
 
 }
